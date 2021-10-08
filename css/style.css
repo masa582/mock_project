@@ -1,0 +1,403 @@
+@charset "UTF-8";
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    /* font-size: 62.5%; */
+    vertical-align: baseline;
+    background: transparent;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.0rem;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+/* ここから　全体に適用 */
+
+box-sizing: border-box *, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+/* ここから  開始　　　　　ここから  開始　　　　　　　　　　　*/
+
+.index {
+    color: #fff;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    margin: 20px 120px;
+    top: 0;
+    align-items: center;
+}
+
+.header-wrap {
+    height: 30px;
+}
+
+.logo {
+    height: 70px;
+    width: 388px;
+    cursor: pointer;
+}
+
+.header-nav ul {
+    display: flex;
+}
+
+.header-nav li {
+    margin-right: 250px;
+    font-size: 3rem;
+}
+
+.header-nav a {
+    color: #fff;
+    text-decoration: none;
+    z-index: 100;
+}
+
+/* ここから背景動画 の範囲 */
+
+.video {
+    /* width: 100vw;
+    height: 100%; */
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
+    position: fixed;
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    position: fixed;
+    object-fit: contain;
+}
+
+/* firstviewの会社名の部分 */
+
+.main_inner {
+    position: relative;
+    z-index: 2;
+}
+
+.row {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    height: 100vh;
+    font-size: 8vw;
+}
+
+.row2 {
+    height: 100vh;
+}
+
+.news {
+    height: 40vh;
+    margin: 0px 200px;
+}
+
+.newsttl{
+    font-size: 5rem;
+}
+
+.newsCnt {
+    list-style: none;
+}
+
+.newslist {
+    margin: 3rem 0rem;
+    /* border-bottom: 1px solid; */
+}
+
+.newsCnt a {
+    display: flex;
+}
+
+.newsDate {
+    padding: 10px 10px 10px 0px;
+    margin: 0px 15px 0px 0px;
+    font-size: 2rem;
+}
+
+.cardCat {
+    padding: 10px;
+    background: #DDDDDD;
+    margin: 0px 15px;
+    display: inline-block;
+    color: #000;
+    font-size: 2rem;
+}
+
+.newsItem{
+    padding: 10px;
+    margin: 0px 15px;
+    font-size: 2rem;
+}
+
+/* .p-topNews__listItem {
+    padding: 0 0 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #efefef;
+} */
+
+/* recruitの部分 */
+
+.recruit-bg {
+    height: 1000px;
+    background-image: url("/img/recruit.jpg ");
+    background-size: cover;
+    background-position: 50% 90%;
+}
+
+.recruit_inner {
+    padding: 0 20rem;
+}
+
+.recruit-ttl {
+    display: block;
+    text-align: center;
+    padding-top: 10rem;
+    padding-bottom: 20rem;
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.recruit-ttl_2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.recruit-txt_1 p {
+    padding-bottom: 20rem;
+    font-size: 2rem;
+}
+
+.recruit-txt_2 p {
+    font-size: 2rem;
+}
+
+/* Contactの部分 */
+
+.contact-bg {
+    height: 800px;
+    background-image: url("/img/contact.jpg ");
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-mask {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 800px;
+    display: block;
+}
+
+.contact_inner {
+    padding: 0 20rem;
+}
+
+.contact-ttl {
+    display: block;
+    text-align: center;
+    padding-top: 10rem;
+    padding-bottom: 20rem;
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.contact-txt1 {
+    font-size: 4rem;
+}
+
+.contactBtn {
+    margin-top: 7rem;
+}
+
+.contact-txt2 {
+    border: 2px solid;
+    border-color: #fff;
+    border-radius: 12px;
+    width: 12rem;
+    font-size: 2rem;
+    padding: 2rem 4rem;
+    cursor: pointer;
+    /* padding-top: 50rem; */
+}
+
+/* footerの部分 */
+
+.footer {
+    display: block;
+    background: #000;
+    height: 300px;
+    padding: 50px 5%;
+    position: relative;
+    /* z-index: 101; */
+}
+
+.footer_logo {
+    width: inherit;
+}
+
+.footer_logo img {
+    height: 70px;
+    width: 388px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.footerCnt {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 10rem;
+}
+
+.footerBtm {
+    display: flex;
+}
+
+.footerCright {
+    font-size: 2rem;
+    padding-top: 8rem;
+    padding-right: 50rem;
+}
+
+/* 消すかも */
+
+.footerSns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerSnsttl {
+    padding-left: 1.5rem;
+}
+
+.footerSns img {
+    width: 50px;
+    margin-right: 1rem;
+}
+
+.footerSnsttl {
+    font-size: 3rem;
+    padding-bottom: 20px;
+}
