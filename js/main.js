@@ -2,6 +2,29 @@
  * common.funcs.js
  */
 
+let mySwiper6 = new Swiper('.swiper-container', {
+  loop: true, //最後まで行ったら最初のスライド
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: true //上にカーソル置いたら止まる
+  },
+
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+     type: 'bullets',
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+
+
 $(window).bind('load', function() {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);

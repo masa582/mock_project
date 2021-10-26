@@ -284,7 +284,14 @@ box-sizing: border-box *, *:before, *:after {
 .wrapper {
     overflow: hidden;
     min-height: 100%;
-    position: relative;
+    /* position: relative; */
+}
+
+.header-wrap {
+    height: 130px;
+    width: 100%;
+    /* position: fixed; */
+    display: block;
 }
 
 .header {
@@ -295,13 +302,10 @@ box-sizing: border-box *, *:before, *:after {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    margin: 20px 120px;
-    top: 0;
+    margin: 0px 120px;
+    top: 20px;
     align-items: center;
-}
-
-.header-wrap {
-    height: 30px;
+    overflow: hidden;
 }
 
 .logo {
@@ -311,12 +315,11 @@ box-sizing: border-box *, *:before, *:after {
 }
 
 .header-nav {
-    z-index: 3;
+    z-index: 100;
 }
 
 .header-nav ul {
     display: flex;
-    padding-top: 60px;
 }
 
 .header-nav li {
@@ -333,45 +336,10 @@ box-sizing: border-box *, *:before, *:after {
 
 /* ここから背景動画 の範囲 */
 
-.video {
-    /* width: 100vw;
-    height: 100%; */
-    width: 100vw;
-    height: 100vh;
-    object-fit: fill;
-    position: fixed;
-}
-
-.cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.2);
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    position: fixed;
-    object-fit: contain;
-}
-
 /* firstviewの会社名の部分 */
 
-.main_inner {
-    position: relative;
-    z-index: 2;
-}
-
-.row {
-    position: absolute;
-    top: 12%;
-    left: 30%;
-    height: 100vh;
-    font-size: 8vw;
-}
-
-.row2 {
-    height: 100vh;
+.main {
+    overflow: hidden;
 }
 
 .c-scrolldown {
@@ -450,51 +418,35 @@ box-sizing: border-box *, *:before, *:after {
     transform: scale(2)
 }
 
-/* newsの部分 */
+/* bodyの高さ */
 
-.news {
-    height: 65vh;
-    margin: 0px 20rem;
+/* 背景画像の部分 */
+
+.main {}
+
+.news_mainBg_wrapper {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
-.newsttl {
-    font-size: 5rem;
-    padding: 2rem 0rem;
-    border-bottom: 1px solid;
+.news_maingBg_inner {
+    position: relative;
 }
 
-.newsCnt {
-    list-style: none;
+.news_mainBg {
+    background-image: url("/img/news.jpg");
+    height: 60vh;
 }
 
-.newslist {
-    padding: 2rem 0rem;
-    border-bottom: 1px solid;
+.news_accent {
+    background-color: #06397D;
+    height: 20vh;
+    /* position: relative; */
 }
 
-.newsCnt a {
-    display: flex;
-}
-
-.newsDate {
-    padding: 10px 10px 10px 0px;
-    margin: 0px 15px 0px 0px;
-    font-size: 2rem;
-}
-
-.cardCat {
-    padding: 10px;
-    background: #DDDDDD;
-    margin: 0px 15px;
-    display: inline-block;
-    color: #000;
-    font-size: 2rem;
-}
-
-.newsItem {
-    padding: 10px;
-    margin: 0px 15px;
-    font-size: 2rem;
+.news_accent_ttl {
+    top: 2rem;
+    position: absolute;
 }
 
 .secBox_btn {
@@ -617,7 +569,8 @@ box-sizing: border-box *, *:before, *:after {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     width: 0%;
-    background: #fff
+    background: #000
+    /*変更済み*/
 }
 
 .navigationInnerList li>a {
@@ -660,256 +613,9 @@ box-sizing: border-box *, *:before, *:after {
 }
 
 /* news listで使用 */
-.c-border-font{
+
+.c-border-font {
     color: black;
-}
-
-
-
-/* serviceの部分 */
-
-.service {
-    height: 55vh;
-    margin: 0rem 20rem 10rem 20rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.serviceImg {
-    width: 50%;
-}
-
-.serviceCnt {
-    width: 45%;
-}
-
-.serviceTlt {
-    font-size: 5rem;
-    margin-bottom: 0.7rem;
-}
-
-.serviceTlt_EN {
-    margin-bottom: 4rem;
-}
-
-.service_Txt1 {
-    font-size: 2rem;
-    margin-bottom: 7rem;
-}
-
-.service_Txt2 {
-    font-size: 2rem;
-    margin-bottom: 7rem;
-}
-
-.service_Txt3 {
-    font-size: 2rem;
-    margin-bottom: 7rem;
-}
-
-.service_Txt4 {
-    font-size: 2rem;
-}
-
-/* 企業情報の部分 */
-
-.company {
-    height: 55vh;
-    margin: 0rem 20rem 20rem 20rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.companyImg {
-    width: 45%;
-}
-
-.companyImg2 {
-    display: inline; //念のため
-    width: auto; //念のため
-    max-width: 100%;
-    max-height: 100%;
-    align-self: center; //上下の中央揃え
-}
-
-.companyCnt {
-    width: 45%;
-    height: 50vh;
-    min-height: 400px;
-    margin-right: 2rem;
-    padding-top: 30px;
-}
-
-.companyTlt {
-    font-size: 5rem;
-    margin-bottom: 0.7rem;
-}
-
-.companyTlt_EN {
-    margin-bottom: 12rem;
-}
-
-.company_Txt1 {
-    font-size: 3rem;
-    margin-bottom: 9rem;
-}
-
-.company_Txt2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-/* swiperの部分 */
-
-.swiper {
-    width: 45%;
-    height: 60vh;
-    min-height: 400px;
-    min-width: 400px;
-    margin-left: 2rem;
-    position: relative;
-}
-
-.swiper-wrapper {
-    min-width: 300px;
-    min-height: 300px;
-}
-
-.swiper-container {
-    position: relative;
-    overflow: hidden;
-    padding: 20px 0;
-    height: 40vw;
-    width: 50%;
-    max-height: 600px; //最大の高さ
-    height: 60vh;
-    min-height: 400px;
-    min-width: 400px;
-    margin-left: 2rem;
-}
-
-.swiper-slide {
-    object-fit: fill;
-    height: 90%;
-}
-
-.swiper-pagination {
-    /* text-align: end; */
-    position: absolute;
-    top: 59vh;
-    left: 180px !important;
-    width: 45%;
-    bottom: -10px !important;
-    height: 30px !important;
-    z-index: 100;
-    overflow: visible;
-}
-
-.swiper-pagenation-wrapper {
-    overflow: visible;
-    bottom: -20px !important;
-}
-
-.swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    /* border: solid 3px #B2B2B2; */
-    background-color: #B2B2B2;
-    opacity: 1;
-    border: 1px solid transparent;
-}
-
-.swiper-pagination-bullet-active {
-    border: 1px solid #FFF;
-    background-color: #636363;
-    opacity: 1;
-    width: 10px;
-    height: 10px;
-    bottom: -1px;
-    position: relative;
-}
-
-/* recruitの部分 */
-
-.recruit-bg {
-    height: 1000px;
-    background-image: url("/img/recruit.jpg ");
-    background-size: cover;
-    background-position: 50% 90%;
-}
-
-.recruit_inner {
-    padding: 0 20rem;
-}
-
-.recruit-ttl {
-    display: block;
-    text-align: center;
-    padding-top: 10rem;
-    padding-bottom: 20rem;
-    font-size: 5rem;
-    font-weight: 400;
-}
-
-.recruit-ttl_2 {
-    font-size: 2rem;
-    margin-top: 1rem;
-}
-
-.recruit-txt_1 p {
-    padding-bottom: 20rem;
-    font-size: 2rem;
-}
-
-.recruit-txt_2 p {
-    font-size: 2rem;
-}
-
-/* Contactの部分 */
-
-.contact-bg {
-    height: 800px;
-    background-image: url("/img/contact.jpg ");
-    background-size: cover;
-    background-position: center;
-}
-
-.contact-mask {
-    background-color: rgba(0, 0, 0, 0.6);
-    height: 800px;
-    display: block;
-}
-
-.contact_inner {
-    padding: 0 20rem;
-}
-
-.contact-ttl {
-    display: block;
-    text-align: center;
-    padding-top: 10rem;
-    padding-bottom: 20rem;
-    font-size: 5rem;
-    font-weight: 400;
-}
-
-.contact-txt1 {
-    font-size: 4rem;
-}
-
-.contactBtn {
-    margin-top: 7rem;
-}
-
-.contact-txt2 {
-    border: 2px solid;
-    border-color: #fff;
-    border-radius: 12px;
-    width: 12rem;
-    font-size: 2rem;
-    padding: 2rem 4rem;
-    cursor: pointer;
-    /* padding-top: 50rem; */
 }
 
 /* footerの部分 */
