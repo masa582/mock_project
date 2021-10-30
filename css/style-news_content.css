@@ -284,12 +284,13 @@ box-sizing: border-box *, *:before, *:after {
 .wrapper {
     overflow: hidden;
     min-height: 100%;
+    /* max-width: 100vw; */
     /* position: relative; */
 }
 
 .header-wrap {
     height: 100px;
-    width: 100%;
+    width: 100vw;
     position: relative;
     position: fixed;
     z-index: 300;
@@ -335,6 +336,11 @@ box-sizing: border-box *, *:before, *:after {
     font-size: 3rem;
 }
 
+.header-nav:last-child {
+    margin-right: 0px;
+    font-size: 3rem;
+}
+
 .header-nav a {
     color: #fff;
     text-decoration: none;
@@ -348,6 +354,8 @@ box-sizing: border-box *, *:before, *:after {
 
 .main {
     overflow: hidden;
+    /* max-width: 100%; */
+    object-fit: contain;
 }
 
 .c-scrolldown {
@@ -432,12 +440,13 @@ box-sizing: border-box *, *:before, *:after {
 
 .main {
     position: relative;
-    height: 130vh;
+    height: 137vh;
     background-color: wheat;
+    font-size: 1.5rem;
 }
 
 .news_mainBg_wrapper {
-    height: 160vh;
+    height: 150vh;
     height: calc(var(--vh, 1vh) * 100);
     top: 100px;
     /* position: absolute; */
@@ -458,6 +467,7 @@ box-sizing: border-box *, *:before, *:after {
 .news_accent {
     background-color: #06397D;
     height: 20vh;
+    width: 100%;
     /* position: relative; */
 }
 
@@ -470,7 +480,12 @@ box-sizing: border-box *, *:before, *:after {
 }
 
 .news_mainsec {
-    margin: 10rem 20rem;
+    margin: 5rem 20rem;
+}
+
+.news_header_title{
+    font-size: 2.5rem;
+    margin: 2.5rem 0rem;
 }
 
 .newsCntSec {
@@ -483,7 +498,6 @@ box-sizing: border-box *, *:before, *:after {
     align-items: flex-start;
     padding: 1.4rem 2rem 1.4rem 0rem;
     line-height: 1.2;
-    border-bottom: 1px solid #707070;
     font-size: 2rem;
     align-items: center;
 }
@@ -494,10 +508,6 @@ box-sizing: border-box *, *:before, *:after {
     display: inline-block;
     width: 12rem;
     font-size: 1.4rem;
-}
-
-.news_mainsec dd {
-    /* padding-left: 6rem; */
 }
 
 .newsCard_oshirase {
@@ -732,7 +742,6 @@ box-sizing: border-box *, *:before, *:after {
     font-size: 2rem;
     padding-top: 8rem;
     padding-right: 50rem;
-    z-index: 30;
     color: #fff;
 }
 

@@ -288,13 +288,15 @@ box-sizing: border-box *, *:before, *:after {
 }
 
 .header-wrap {
-    height: 130px;
+    height: 100px;
     width: 100%;
     position: relative;
-    /* position: fixed; */
+    position: fixed;
     z-index: 300;
+    top: 0px;
     display: block;
     overflow: hidden;
+    background: #fff;
 }
 
 .header {
@@ -306,9 +308,9 @@ box-sizing: border-box *, *:before, *:after {
     justify-content: space-between;
     align-items: center;
     margin: 0px 120px;
-    top: 20px;
+    /* top: 20px; */
     align-items: center;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .logo {
@@ -429,12 +431,13 @@ box-sizing: border-box *, *:before, *:after {
 /* 背景画像の部分 */
 
 .main {
-    /* position: absolute; */
-    height: 100vh;
+    position: relative;
+    height: 160vh;
+    background-color: wheat;
 }
 
 .news_mainBg_wrapper {
-    height: 100vh;
+    height: 150vh;
     height: calc(var(--vh, 1vh) * 100);
     top: 100px;
     /* position: absolute; */
@@ -459,9 +462,63 @@ box-sizing: border-box *, *:before, *:after {
 }
 
 .news_accent_ttl {
-    top: 2rem;
+    top: 63rem;
+    left: 19rem;
     position: absolute;
+    font-size: 6rem;
+    color: #fff;
 }
+
+.news_mainsec {
+    margin: 10rem 20rem;
+}
+
+.newsCntSec {
+    width: 60vw;
+    margin-right: 5rem;
+}
+
+.news_mainsec dl {
+    display: flex;
+    align-items: flex-start;
+    padding: 1.4rem 2rem 1.4rem 0rem;
+    line-height: 1.2;
+    border-bottom: 1px solid #707070;
+    font-size: 2rem;
+    align-items: center;
+}
+
+.news_mainsec dt {
+    margin-right: 2rem;
+    text-align: right;
+    display: inline-block;
+    width: 12rem;
+    font-size: 1.4rem;
+}
+
+.news_mainsec dd {
+    /* padding-left: 6rem; */
+}
+
+.newsCard_oshirase {
+    padding: 0.5rem;
+    background: #36E21F;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.newsCard_service {
+    padding: 0.5rem;
+    background: #9E4A91;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.newsCnt {
+    padding-left: 3rem;
+}
+
+/* news section　ここまで */
 
 .secBox_btn {
     margin-top: 20px;
@@ -640,8 +697,8 @@ box-sizing: border-box *, *:before, *:after {
     height: 300px;
     padding: 50px 5%;
     position: absolute;
-    width: 100%;
-    /* z-index: 101; */
+    width: 89%;
+    z-index: 101;
 }
 
 .footer_logo {
@@ -653,6 +710,10 @@ box-sizing: border-box *, *:before, *:after {
     width: 388px;
     cursor: pointer;
     margin-right: 30px;
+}
+
+.footer_address {
+    color: #fff;
 }
 
 .footerCnt {
@@ -671,9 +732,9 @@ box-sizing: border-box *, *:before, *:after {
     font-size: 2rem;
     padding-top: 8rem;
     padding-right: 50rem;
+    color: #fff;
 }
 
-/* 消すかも */
 
 .footerSns {
     display: flex;
@@ -683,6 +744,7 @@ box-sizing: border-box *, *:before, *:after {
 
 .footerSnsttl {
     padding-left: 1.5rem;
+    color: #fff;
 }
 
 .footerSns img {
