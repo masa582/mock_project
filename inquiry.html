@@ -64,23 +64,56 @@
 
 
           <form action="送信先" method="get（初期値） / post">
+            <div class="form-content">
+              <label for="name">お名前<span class="colorRed">*</span>　</label>
+              <input id="name" name="name" type="text">
+            </div>
 
-            <p>お名前　　　　　　　　<input type="text" name="NAME"></p><br>
+            <div class="form-content">
+              <label for="name">フリガナ</label>
+              <input id="name" name="name" type="text">
+            </div>
+            <div class="form-content">
+              <label for="name">電話番号<span class="colorRed">*</label>
+              <input id="name" name="name" type="text">
+            </div>
+            <div class="form-content">
+              <label for="name">メールアドレス<span class="colorRed">*</label>
+              <input id="name" name="name" type="text">
+            </div>
+            <div class="form-content">
+              <label for="name">郵便番号<span class="colorRed">*</label>
+              <input id="name" name="name" type="text">
+            </div>
+            <div class="form-content">
+              <label for="name">ご住所<span class="colorRed">*</label>
+              <input id="name" name="name" type="text">
+            </div>
 
-            <p>フリガナ　　　　　　　<input type="text" name="NAME"></p><br>
+            <div class="inquiry-content">
+              <p>問合せ内容<span class="colorRed">*</p>
+              <div class="inquiry-content-title">
+                <p>-中途採用に関して</p>
+                <p>-新卒採用に関して</p>
+                <p>-その他のお問い合わせ</p>
+              </div>
+            </div>
 
-            <p>メールアドレス　　　　<input type="text" name="NAME"></p><br>
+            <div class="inquiry-textarea">
+              <textarea name="textarea" cols="70" rows="15"></textarea>
 
-            <p>郵便番号　　　　　　　<input type="text" name="email"></p><br>
-
-            <p>住所　　　　　　　　　<input type="text" name="NAME"></p><br>
-
-            <p><input type="submit" value="送信する"></p>
-
-            <p><input type="reset" value="取消する"></p>
-
-
-            <textarea name="textarea" cols="30" rows="3"></textarea>
+            </div>
+            <div class="policyBox">
+              <p class="policy-title">個人情報の取り扱いについて</p><br>
+              <p> <span class="btn">個人情報保護方針</span>を必ずご確認下さい。</p><br>
+              <p class="agree">
+                <label>
+                  <input type="checkbox" name="agree" id="agree">
+                  <span class="agree-txt">個人情報保護方針に同意する</span>
+              </p>
+              </label>
+            </div>
+              <input type="submit" value="送信する" class="send-button">
           </form>
         </div>
 
