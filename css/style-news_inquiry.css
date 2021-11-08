@@ -604,15 +604,46 @@ box-sizing: border-box *, *:before, *:after {
 
 .send-button:hover {
     background-color: #F56500;
-    opacity: 0.7 
+    opacity: 0.7
 }
 
-.btn {
+.openBtn {
     text-decoration: underline;
     cursor: pointer;
 }
 
 .agree::before {}
+
+/* モーダルについて */
+
+.openBtn {
+    display: block;
+    /* margin: 50px auto; */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.modal__content-inner {
+    background-color: white;
+    width: 500px;
+    text-align: center;
+    padding: 50px;
+}
 
 /* 問合せフォーム ここまで */
 

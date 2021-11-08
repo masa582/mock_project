@@ -11,6 +11,8 @@
   <link href="css/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/locomotive-scroll.min.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/6.0.0-beta2/css/all.js" /> -->
+  <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style-news_inquiry.css" />
 </head>
 <script>
@@ -105,7 +107,7 @@
             </div>
             <div class="policyBox">
               <p class="policy-title">個人情報の取り扱いについて</p><br>
-              <p> <span class="btn">個人情報保護方針</span>を必ずご確認下さい。</p><br>
+              <p> <a class="openBtn">個人情報保護方針</a>を必ずご確認下さい。</p><br>
               <p class="agree">
                 <label>
                   <input type="checkbox" name="agree" id="agree">
@@ -113,7 +115,21 @@
               </p>
               </label>
             </div>
-              <input type="submit" value="送信する" class="send-button">
+
+            <div id="modal" class="modal">
+              <div class="modal__content">
+                <div class="modal__content-inner">
+                  <p>モーダル</p>
+                  <input type="button" id="closeBtn" value="閉じる">
+                </div>
+              </div>
+            </div>
+
+
+            <button type="submit" class="send-button">
+              <i class="far fa-envelope"></i> 送信する
+            </button>
+
           </form>
         </div>
 
