@@ -1,4 +1,14 @@
-// モーダル関連
+// モーダル関連　test用
+$(function () {
+  $('.js-open').click(function () {
+    $('#overlay, .modal-window').fadeIn();
+  });
+  $('.js-close').click(function () {
+    $('#overlay, .modal-window').fadeOut();
+  });
+});
+
+// coachtech用のモーダル　参照用
 
 const openBtn = document.getElementById('openBtn');
 const closeBtn = document.getElementById('closeBtn');
@@ -14,6 +24,7 @@ window.addEventListener('click', (e) => {
     modal.style.display = 'none';
   }
 });
+
 
 /*
  * common.funcs.js
